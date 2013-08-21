@@ -8,6 +8,6 @@ First cut of Liferay ClickStack.
    This creates a zip called cb_liferay.zip, copy to liferay_plugin directory
   
 2. Run genapp
-    ```genapp:deploy("PATH_TO_test_app/").
 
-3. cd $APP_ID/control/start
+```genapp:deploy("PATH_TO_test_app/").
+   cd $APP_ID/control/start```
