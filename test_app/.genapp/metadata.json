@@ -1,0 +1,10 @@
+{
+  "app": {
+    "plugins": [
+      {
+	  "name": "liferay_plugin",
+	  "src": "local_plugin:///Users/harpreet/genapp/liferay/liferay_plugin/"
+      }
+    ]
+  }
+}

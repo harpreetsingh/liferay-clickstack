@@ -1,0 +1,26 @@
+#!/bin/bash -eu
+
+set +x
+
+install_app() {
+    echo $pkg_dir
+    echo $app_dir
+    cp -R $pkg_dir/* $app_dir
+}
+
+install_liferay(){
+	cd $app_dir/
+	unzip $plugin_dir/cb_liferay.zip
+}
+
+# create start script
+create_start_script(){
+	liferay_bin=$app_dir/liferay-portal-6.1.1-ce-ga2/tomcat-7.0.27/bin
+	echo "#!/bin/bash" > $control_dir/start
+	echo "exec $liferay_bin/catalina.sh start"  >> $control_dir/start
+	chmod 755 $control_dir/start
+}
+
+install_app
+install_liferay
+create_start_script
